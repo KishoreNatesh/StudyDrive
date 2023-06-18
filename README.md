@@ -44,5 +44,11 @@ command - pabot --processes 4 --testlevelsplit -d ./results .\TestSuites\Login.r
     * Continuous learning and understanding from a customer's perspective.
     * Encouraging and promoting ideas for improvement.
     * Implementing test automation and following industry best practices.
+ 
+5. Additional ideas/steps to make the upload process flawless -
+    * We need to maximum validate file size upload to test the limit of 100mb and beyond.
+    * Need to implement file type restriction.
+    * If there is a network error then we need to make sure we throw error accordingly.
+    * Then provide retry upload option.
 
 *Note: I have recently started working with Appium. Although I was new to it, I managed to install all the necessary requirements and began automating tests for the mobile app. You can find the Appium test suites in the TestSuites folder. However, due to time constraints, I couldn't automate everything, but I am confident in my ability to automate effectively using Robot Framework, which is my key skillset.
