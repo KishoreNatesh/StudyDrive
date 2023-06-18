@@ -1,0 +1,8 @@
+env:
+  prod: https://www.studydrive.net/
+
+username:
+  prod: kishore.studydrive@gmail.com
+
+password:
+  prod: StudyDrive@123
