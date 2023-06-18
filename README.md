@@ -51,4 +51,4 @@ command - pabot --processes 4 --testlevelsplit -d ./results .\TestSuites\Login.r
     * If there is a network error then we need to make sure we throw error accordingly.
     * Then provide retry upload option.
 
-*Note: I have recently started working with Appium. Although I was new to it, I managed to install all the necessary requirements and began automating tests for the mobile app. You can find the Appium test suites in the TestSuites folder. However, due to time constraints, I couldn't automate everything, but I am confident in my ability to automate effectively using Robot Framework, which is my key skillset.
+*Note: Additionally, I would like to mention that although I am new to Appium, I have successfully started automation for the mobile app. While I couldn't automate everything for mobile app due to time constraints in my current workplace, I am confident in my ability to effectively automate using Robot Framework and Appium.
