@@ -28,21 +28,21 @@ command - pabot --processes 4 --testlevelsplit -d ./results .\TestSuites\Login.r
 
 # Q/A sections
 1. Please provide us with the email address you used to create the user account
-    kishore.studydrive@gmail.com   password-Studydrive@123
+    * kishore.studydrive@gmail.com   password-Studydrive@123
 
 2. How would you ensure the process is bug-free?
-    Perform requirements analysis to gather knowledge about the story for test planning and design.
-    Execute tests such as smoke tests, functional testing, UAT, and raise defects if found.
-    Perform regression testing.
+    * Perform requirements analysis to gather knowledge about the story for test planning and design.
+    * Execute tests such as smoke tests, functional testing, UAT, and raise defects if found.
+    * Perform regression testing.
 
 3. How would you ensure the process works after each release?
-    Maintain effective communication and collaboration within the team.
-    Follow Agile standards and practices.
-    Implement test automation with CI/CD integration for each development build.
+    * Maintain effective communication and collaboration within the team.
+    * Follow Agile standards and practices.
+    * Implement test automation with CI/CD integration for each development build.
 
 4. What are the best practices that a QA can introduce/implement in a team to achieve the best possible outcomes in a delivery process?
-    Continuous learning and understanding from a customer's perspective.
-    Encouraging and promoting ideas for improvement.
-    Implementing test automation and following industry best practices.
+    * Continuous learning and understanding from a customer's perspective.
+    * Encouraging and promoting ideas for improvement.
+    * Implementing test automation and following industry best practices.
 
 *Note: I have recently started working with Appium. Although I was new to it, I managed to install all the necessary requirements and began automating tests for the mobile app. You can find the Appium test suites in the TestSuites folder. However, due to time constraints, I couldn't automate everything, but I am confident in my ability to automate effectively using Robot Framework, which is my key skillset.
