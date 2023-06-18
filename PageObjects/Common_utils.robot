@@ -20,7 +20,6 @@ set environment
 
 accept cookies
     Sleep    5s
-    Wait For Condition	return document.readyState == "complete"
     Repeat Keyword	8 times    Press Keys    ${None}    TAB
     Press Keys    ${None}   RETURN
 
