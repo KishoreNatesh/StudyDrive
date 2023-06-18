@@ -17,5 +17,26 @@ Verify course upload with simple PDF
     login to studydrive    default    default
     go to upload document
     select course to upload
-    upload a file
+    upload a file    pdf-sample01.pdf
     verify upload is complete
+    verify deletion of uploaded file
+
+Verify course upload with random png file
+    Go to studydrive
+    accept cookies
+    login to studydrive    default    default
+    go to upload document
+    select course to upload
+    upload a file    Kishore.png
+    verify upload is complete
+    verify deletion of uploaded file
+
+Verify course upload with random exe file
+    Go to studydrive
+    accept cookies
+    login to studydrive    default    default
+    go to upload document
+    select course to upload
+    upload a file    AnyDesk.exe
+    verify upload is complete
+    verify deletion of uploaded file

@@ -8,13 +8,13 @@ ${upload_doc}    //*/a[contains(text(),'Upload document')]
 ${upload_page_header}    //*/h2[contains(text(),'Select the course you want to upload to')]
 ${course_name_text}    //*/input[@placeholder="Enter course name"]
 #Python programming
-${browse_files}    //*/input[@type="file"]
+${browse_files}    xpath=//*/input[@type="file"]
 ${file_desc}    //*/input[@placeholder="Add description"]
 ${upload_select_sem}    //*/input[@placeholder="Select semester"]
 ${file_type}    //*/input[@placeholder="Select document type"]
 ${upload_btn}    //*/button[contains(text(),'Upload')]
 ${maybe_later}    //*/button[contains(text(),'Maybe later')]
-${proceed_to_course}    //*/a[contains(text(),'Proceed to course')]
+${proceed_to_course}    //*/a[@id="proceed-to-course"]
 ${upload_more_files}    //*/button[contains(text(),'Upload more files')]
 ${upload_complete}    //*/div[contains(text(),'Upload completed')]
 ${python_programming_header}    //*/h1[contains(text(),'Python programming')]
@@ -37,9 +37,11 @@ select course to upload
     Press Keys    ${None}   RETURN
 
 upload a file
-    # [Arguments]    ${file_path}=../Resources/TestData/pdf-sample01.pdf
+    [Arguments]    ${file_path}=pdf-sample01.pdf
     Sleep    2s
-    Choose File    ${browse_files}    ${CURDIR}/Resources/TestData/pdf-sample01.pdf
+    ${canonical_path}=    Evaluate    sys.modules['os'].path.normpath('''${CURDIR}/../Resources/TestData/${file_path}''')
+    Log    ${canonical_path}
+    Choose File    ${browse_files}    ${canonical_path}
     Wait Until Page Contains Element    ${file_desc}
     Input Text    ${file_desc}    Python programming
     Click Element    ${upload_select_sem}
@@ -55,3 +57,21 @@ upload a file
 verify upload is complete
     Wait Until Page Contains Element    ${upload_complete}
     Page Should Contain Element    ${upload_complete}
+
+verify deletion of uploaded file
+    Wait Until Page Contains Element    ${proceed_to_course}
+    Click Element    ${proceed_to_course}
+    ${current_windows} =	Get Window Handles
+    Log    ${current_windows}
+    Switch Window    ${current_windows[1]}
+    Sleep    2s
+    Wait Until Page Contains Element    ${view_file}
+    Click Element    ${view_file}
+    Wait Until Page Contains Element    ${edit_file}
+    Click Element    ${edit_file}
+    Wait Until Page Contains Element    ${delete_file}
+    Click Element    ${delete_file}
+    Wait Until Page Contains Element    ${delete_doc}
+    Click Element    ${delete_doc}
+    Wait Until Page Contains    Share your documents and get great rewards
+    Page Should Contain    Share your documents and get great rewards
